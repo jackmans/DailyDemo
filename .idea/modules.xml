@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DailyDemo.iml" filepath="$PROJECT_DIR$/DailyDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ViewPageTest/ViewPageTest.iml" filepath="$PROJECT_DIR$/ViewPageTest/ViewPageTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animationtest/animationtest.iml" filepath="$PROJECT_DIR$/animationtest/animationtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fragmentdemo/fragmentdemo.iml" filepath="$PROJECT_DIR$/fragmentdemo/fragmentdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gridViewTest/gridViewTest.iml" filepath="$PROJECT_DIR$/gridViewTest/gridViewTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/layouttest/layouttest.iml" filepath="$PROJECT_DIR$/layouttest/layouttest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/newsappone/newsappone.iml" filepath="$PROJECT_DIR$/newsappone/newsappone.iml" />
+    </modules>
+  </component>
+</project>
