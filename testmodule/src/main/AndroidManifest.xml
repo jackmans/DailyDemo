@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="test.cyz.com.newsappone">
+    package="test.cyz.com.testmodule">
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
@@ -17,6 +17,5 @@
             </intent-filter>
         </activity>
     </application>
-
 
 </manifest>

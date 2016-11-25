@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/gridViewTest" />
             <option value="$PROJECT_DIR$/layouttest" />
             <option value="$PROJECT_DIR$/newsappone" />
+            <option value="$PROJECT_DIR$/testmodule" />
           </set>
         </option>
         <option name="myModules">
@@ -26,6 +27,7 @@
             <option value="$PROJECT_DIR$/gridViewTest" />
             <option value="$PROJECT_DIR$/layouttest" />
             <option value="$PROJECT_DIR$/newsappone" />
+            <option value="$PROJECT_DIR$/testmodule" />
           </set>
         </option>
       </GradleProjectSettings>

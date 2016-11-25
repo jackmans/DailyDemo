@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/gridViewTest/gridViewTest.iml" filepath="$PROJECT_DIR$/gridViewTest/gridViewTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/layouttest/layouttest.iml" filepath="$PROJECT_DIR$/layouttest/layouttest.iml" />
       <module fileurl="file://$PROJECT_DIR$/newsappone/newsappone.iml" filepath="$PROJECT_DIR$/newsappone/newsappone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testmodule/testmodule.iml" filepath="$PROJECT_DIR$/testmodule/testmodule.iml" />
     </modules>
   </component>
 </project>

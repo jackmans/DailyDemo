@@ -1,46 +1,37 @@
 package test.cyz.com.newsappone.fragment;
 
 
-import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.DataOutput;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSocketFactory;
-
 import test.cyz.com.newsappone.R;
 import test.cyz.com.newsappone.adapter.NewsContentFragmentAdapter;
+import test.cyz.com.newsappone.domain.News;
+import test.cyz.com.newsappone.util.HttpUtil;
+import test.cyz.com.newsappone.util.HttpsCallbackListener;
 
 public class NewsFragment extends Fragment {
 
     LinearLayout ly_items;
+    //新闻标题集合
     List<String> listItems = new ArrayList<String>();
     HorizontalScrollView horizontalScrollView;
     int itemSelectIndex;
@@ -67,6 +58,7 @@ public class NewsFragment extends Fragment {
         NewsContentFragmentAdapter fpAdapter = new NewsContentFragmentAdapter(fm, fragmentList);
         viewPager.setAdapter(fpAdapter);
         viewPager.setCurrentItem(0);
+
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -152,51 +144,7 @@ public class NewsFragment extends Fragment {
         }
     }
 
-    private String getSpecNews() throws MalformedURLException {
-        String result = null;
-         URL url = new URL("https://matthew-yao.com/chenyuanze.php");
-         InputStreamReader in = null;
-
-                try {
-                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                    connection.setConnectTimeout(3000);
-                    connection.setDoInput(true);
-                    connection.setDoOutput(true);
-                    connection.setRequestMethod("POST");
-                    if (connection instanceof HttpsURLConnection) { // 是Https请求
-                        SSLContext sslContext = SSLContextUtil.getSSLContext();
-                        if (sslContext != null) {
-                            SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
-                            ((HttpsURLConnection) connection).setSSLSocketFactory(sslSocketFactory);
-                        }
-                    }
-                    connection.setUseCaches(false);
-                    connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-                    DataOutputStream op = new DataOutputStream(connection.getOutputStream());
-                    op.writeBytes("token=836b32ec64436f6fbc7c0a3d1c8bc17a");
-                    op.flush();
-                    op.close();
-
-                    in = new InputStreamReader(connection.getInputStream());
-                    BufferedReader reader = new BufferedReader(in);
-                    StringBuilder response = new StringBuilder();
-                    String line;
-                    while((line = reader.readLine()) != null){
-                        response.append(line);
-                    }
-                    result = response.toString();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-         return result;
-
-    }
 
 
-
-    private void setRequestParm(){
-
-    }
 
 }

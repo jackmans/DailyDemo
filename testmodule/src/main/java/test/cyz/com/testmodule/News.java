@@ -1,4 +1,4 @@
-package test.cyz.com.newsappone.domain;
+package test.cyz.com.testmodule;
 
 import java.util.Date;
 
@@ -11,9 +11,9 @@ public class News {
     private String title;
     private String content;
     private String author;
-    private String time;
+    private Date time;
 
-    public News(String author, String content, String time, String title) {
+    public News(String author, String content, Date time, String title) {
         this.author = author;
         this.content = content;
         this.time = time;
@@ -36,11 +36,11 @@ public class News {
         this.content = content;
     }
 
-    public String getTime() {
+    public Date getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Date time) {
         this.time = time;
     }
 

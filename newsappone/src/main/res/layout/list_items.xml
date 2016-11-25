@@ -7,21 +7,29 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:id="@+id/tv_newsTitle"
+        android:text="标题"
         android:layout_marginTop="5dp"
         />
-
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_newsTitle">
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:id="@+id/tv_news_Author"
+        android:text="作者"
         android:layout_below="@+id/tv_newsTitle"
         android:layout_marginTop="5dp"/>
 
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:text="时间"
         android:id="@+id/tv_newsTime"
-        android:layout_alignBottom="@+id/tv_news_Author"
-        />
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"/>
+    </LinearLayout>
 
 </RelativeLayout>
