@@ -9,16 +9,19 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+import test.cyz.com.newsappone.domain.News;
+
 /**
  * Created by M on 2016/11/22.
  */
 public class NewsContentFragmentAdapter extends FragmentPagerAdapter {
     private List<Fragment> fragmentList;
+    private List<String> newsItems;
 
-
-    public NewsContentFragmentAdapter(FragmentManager fm, List<Fragment> flist){
+    public NewsContentFragmentAdapter(FragmentManager fm, List<Fragment> flist, List<String>newsItems){
         super(fm);
         this.fragmentList = flist;
+        this.newsItems = newsItems;
     }
 
     @Override
@@ -34,6 +37,11 @@ public class NewsContentFragmentAdapter extends FragmentPagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         return super.instantiateItem(container, position);
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return newsItems.get(position);
     }
 }
 

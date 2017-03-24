@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <ImageView
+        android:layout_height="60dp"
+        android:layout_width="60dp"
+        android:src="@drawable/iv_work"
+        android:id="@+id/iv_nofi_picture"/>
+
+    <TextView
+        android:id="@+id/tv_nofi_text"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="改变图片"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_gravity="bottom"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="上一张"
+        android:id="@+id/btn_before"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_gravity="bottom"
+        android:layout_height="30dp"
+        android:layout_width="100dp"
+        android:text="下一张"
+        android:id="@+id/btn_after"
+        android:gravity="center"/>
+
+
+
+</LinearLayout>

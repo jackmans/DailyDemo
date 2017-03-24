@@ -1,1 +1,1 @@
-include ':ViewPageTest', ':fragmentdemo', ':gridViewTest', ':layouttest', ':animationtest', ':newsappone', ':testmodule'
+include ':ViewPageTest', ':fragmentdemo', ':gridViewTest', ':layouttest', ':animationtest', ':newsappone', ':testmodule', ':contacter', ':picassa'

@@ -9,4 +9,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="test.cyz.com.animationtest.ActivityAnimaSet">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始"
+        android:layout_alignParentTop="true"
+        android:id="@+id/btn_start"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:text="动画效果"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:background="@color/accent_material_dark" />
 </RelativeLayout>

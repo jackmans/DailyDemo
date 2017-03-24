@@ -4,12 +4,14 @@ package test.cyz.com.newsappone;
 
 
 import android.graphics.Color;
+import android.media.Image;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -20,10 +22,10 @@ import test.cyz.com.newsappone.fragment.SettingFragment;
 
 public class MainActivity extends FragmentActivity implements View.OnClickListener{
 
-    private TextView tv_news;
-    private TextView tv_recommend;
-    private TextView tv_live;
-    private TextView tv_setting;
+    private ImageView tv_news;
+    private ImageView tv_recommend;
+    private ImageView tv_live;
+    private ImageView tv_setting;
     private LinearLayout ly_btm;
     FragmentManager fragmentManager;
     private Fragment newsFragment;
@@ -42,10 +44,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     }
 
     private void initView(){
-        tv_news = (TextView)findViewById(R.id.tv_news);
-        tv_recommend =  (TextView)findViewById(R.id.tv_recommend);
-        tv_live =  (TextView)findViewById(R.id.tv_live);
-        tv_setting =  (TextView)findViewById(R.id.tv_setting);
+        tv_news = (ImageView)findViewById(R.id.tv_news);
+        tv_recommend =  (ImageView)findViewById(R.id.tv_recommend);
+        tv_live =  (ImageView)findViewById(R.id.tv_live);
+        tv_setting =  (ImageView)findViewById(R.id.tv_setting);
         ly_btm = (LinearLayout)findViewById(R.id.ly_btm_titleBar);
         tv_news.setOnClickListener(this);
         tv_recommend.setOnClickListener(this);
@@ -77,7 +79,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         clearColor();
         switch (index){
             case 0:
-                tv_news.setTextColor(Color.WHITE);
+                tv_news.setSelected(true);
                 if(newsFragment != null){
                     transaction.show(newsFragment);
                 }
@@ -87,7 +89,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 }
                 break;
             case 1:
-                tv_recommend.setTextColor(Color.WHITE);
+                tv_recommend.setSelected(true);
                 if(recommendFragment != null){
                     transaction.show(recommendFragment);
                 }
@@ -97,7 +99,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 }
                 break;
             case 2:
-                tv_live.setTextColor(Color.WHITE);
+                tv_live.setSelected(true);
                 if(liveFragment != null){
                     transaction.show(liveFragment);
                 }
@@ -107,7 +109,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 }
                 break;
             case 3:
-                tv_setting.setTextColor(Color.WHITE);
+                tv_setting.setSelected(true);
                 if(settingFragment != null){
                     transaction.show(settingFragment);
                 }
@@ -140,10 +142,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
 
     private void clearColor(){
-        tv_news.setTextColor(Color.BLACK);
-        tv_recommend.setTextColor(Color.BLACK);
-        tv_live.setTextColor(Color.BLACK);
-        tv_setting.setTextColor(Color.BLACK);
+        tv_news.setSelected(false);
+        tv_recommend.setSelected(false);
+        tv_live.setSelected(false);
+        tv_setting.setSelected(false);
     }
 
 

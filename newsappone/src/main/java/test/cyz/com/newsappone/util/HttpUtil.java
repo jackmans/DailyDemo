@@ -3,6 +3,8 @@ package test.cyz.com.newsappone.util;
 import android.net.UrlQuerySanitizer;
 import android.net.sip.SipAudioCall;
 import android.os.Message;
+import android.util.Log;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -31,8 +33,6 @@ public class HttpUtil {
     // https、 post、 信任所有证书
     public static void sendHttpsRequest(final String address, final String requestBody,  final HttpsCallbackListener listener){
 
-        final int SHOW_RESPONSE = 0;
-
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -59,16 +59,20 @@ public class HttpUtil {
                     op.writeBytes(requestBody);
                     op.flush();
                     op.close();
-
-                    InputStreamReader inReader = new InputStreamReader(conne.getInputStream());
-                    BufferedReader buReader = new BufferedReader(inReader);
-                    StringBuilder response = new StringBuilder();
-                    String line;
-                    while ((line = buReader.readLine()) != null) {
-                        response.append(line);
+                    if(conne.getResponseCode() == 200){
+                        InputStreamReader inReader = new InputStreamReader(conne.getInputStream());
+                        BufferedReader buReader = new BufferedReader(inReader);
+                        StringBuilder response = new StringBuilder();
+                        String line;
+                        while ((line = buReader.readLine()) != null) {
+                            response.append(line);
+                        }
+                        if(listener != null){
+                            listener.onFinish(response.toString());
+                        }
                     }
-                    if(listener != null){
-                        listener.onFinish(response.toString());
+                    else{
+                        Log.d("aaa", "网络异常");
                     }
 
                 } catch (MalformedURLException e) {

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:id="@+id/ry_detail_top"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:src="@drawable/iv_detail_back2"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/iv_detail_menu_2"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/ry_detail_top"
+        android:background="#d1cfd4"/>
+
+    <FrameLayout
+    android:id="@+id/fy_newsDetailContainer"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_below="@+id/ry_detail_top"
+    />
+
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:src="@drawable/profile_cell_down_shadow"
+        android:layout_above="@+id/rl_detail_bottom"/>
+
+    <RelativeLayout
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rl_detail_bottom">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/iv_edit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/iv_detail_edit_128"/>
+
+        <EditText
+            android:textCursorDrawable="@null"
+            android:background="@null"
+            android:layout_toRightOf="@+id/iv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="评一下"
+            />
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:id="@+id/iv_sharing"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/iv_detail_share_128"/>
+
+
+        </RelativeLayout>
+
+</RelativeLayout>
+
+

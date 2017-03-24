@@ -1,13 +1,87 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="test.cyz.com.newsappone.fragment.SettingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.Toolbar
+        android:layout_height="150dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#146597">
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/ly_setting_top"
+        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_email"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/iv_setting_email"/>
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="60dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/iv_setting_user"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="点击登录"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/iv_setting_set"/>
+
+    </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#04405d">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/iv_setting_night"/>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/iv_setting_image"/>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/iv_setting_downlaod"/>
+    </LinearLayout>
+
+    <include layout="@layout/fragment_setting_bottom"></include>
+</LinearLayout>

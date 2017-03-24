@@ -163,11 +163,4 @@ public class MainActivity extends AppCompatActivity {
 //        return result;
 //    }
 
-    public class updateTask extends AsyncTask<News, Integer, void>{
-
-        @Override
-        protected void doInBackground(News... newses) {
-
-        }
-    }
 }

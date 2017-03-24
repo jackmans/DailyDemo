@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/fl_container"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="7"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:background="#099bb2">
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tv_call"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_width="20dp"
+            android:gravity="center"
+            android:text="通话记录"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tv_contact"
+            android:layout_height="50dp"
+            android:layout_width="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="联系人"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tv_sms"
+            android:layout_height="50dp"
+            android:layout_width="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="短信"/>
+    </LinearLayout>
+</LinearLayout>

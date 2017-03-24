@@ -5,10 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/DailyDemo.iml" filepath="$PROJECT_DIR$/DailyDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ViewPageTest/ViewPageTest.iml" filepath="$PROJECT_DIR$/ViewPageTest/ViewPageTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/animationtest/animationtest.iml" filepath="$PROJECT_DIR$/animationtest/animationtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contacter/contacter.iml" filepath="$PROJECT_DIR$/contacter/contacter.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragmentdemo/fragmentdemo.iml" filepath="$PROJECT_DIR$/fragmentdemo/fragmentdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/gridViewTest/gridViewTest.iml" filepath="$PROJECT_DIR$/gridViewTest/gridViewTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/layouttest/layouttest.iml" filepath="$PROJECT_DIR$/layouttest/layouttest.iml" />
       <module fileurl="file://$PROJECT_DIR$/newsappone/newsappone.iml" filepath="$PROJECT_DIR$/newsappone/newsappone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/picassa/picassa.iml" filepath="$PROJECT_DIR$/picassa/picassa.iml" />
       <module fileurl="file://$PROJECT_DIR$/testmodule/testmodule.iml" filepath="$PROJECT_DIR$/testmodule/testmodule.iml" />
     </modules>
   </component>
